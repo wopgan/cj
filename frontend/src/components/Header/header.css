@@ -1,0 +1,43 @@
+
+header{
+    background-color: #002f4d;
+    padding-top: 0.8%;
+    padding-bottom: 0.8%;
+    margin-bottom: 2rem;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+}
+
+.nav-menu{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.btn-register {
+    cursor: pointer;
+    color: #002f4d;
+    font-weight: bold;
+    font-size: 1rem;
+    background-color: #d6d58e;
+    border: none;
+    border-radius: 15px;
+    width: 6rem;
+    height: 1.5rem;
+    box-shadow: 0px 0px 5px 2px rgba(224,224,224,0.75);
+    margin-right: 1rem;
+}
+
+.btn-login {
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
+    background-color: #002f4d;
+    border: dotted 2px #fff;
+    border-radius: 15px;
+    width: 6rem;
+    height: 1.5rem;
+}

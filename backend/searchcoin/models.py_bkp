@@ -1,0 +1,36 @@
+from django.db import models
+from django.contrib.auth.models import User
+from django.contrib.auth.models import UserManager
+
+
+class CustomUserManager(UserManager):
+    def create_user(self, email, password=None, **extra_fields):
+        user = super().create_user(email, password=password, **extra_fields)
+        CoinFind.objects.create(usersearch=user, searchcoin=3)
+        return user
+
+
+class CoinFind(models.Model):
+    searchcoin = models.CharField(max_length=20, default=0)
+    usersearch = models.ForeignKey(User, on_delete=models.CASCADE)
+
+
+    def __str__(self):
+        return f'User: {self.user.username} - Searchcoins: {self.searchcoin}.'
+
+
+
+class FindCitation(models.Model):
+    findoutcitation = models.PositiveIntegerField(default=0)
+    #coin_find = models.ForeignKey(CoinFind, on_delete=models.CASCADE)
+    usersearch = models.ForeignKey(User, on_delete=models.CASCADE)
+
+
+    def __str__(self):
+        return f'User: {self.user.username} - FindOutCitation: {self.findoutcitation}'
+
+    
+    def save(self, *args, **kwargs):    
+        if self.pk is None:
+            CoinFind.objects.filter(user=self.user).update(searchcoin=models.F('searchcoin')-1)
+        super().save(*args, **kwargs)

@@ -1,0 +1,142 @@
+.bg-main {
+    background-image: url("./img/back_citjur2.png");
+    background-size: cover;
+    height: 600px;
+}
+
+
+.searchBox {
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+.findUperBox {
+    margin-top: 2rem;
+    width: 45%;
+    height: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    background-color: aliceblue;
+    border-radius: 25px;
+}
+
+
+.findBox {
+    width: 90%;
+    height: 1.3rem;
+    background: aliceblue;
+    border: none;
+    color: rgb(70, 70, 70);
+}
+
+input:focus {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+    border: none;
+    color: rgb(70, 70, 70);
+}
+
+.findBox:focus {
+    background: aliceblue;
+    border: none;
+}
+
+.findBox::placeholder {
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
+.btn-find {
+    color: rgb(70, 70, 70);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    font-family: sans-serif;
+    font-weight: 500;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    min-height: 500px;
+    max-width: 80%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .modal-content p {
+    text-align: center;
+    word-wrap: break-word;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .modal-content .close {
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  
+  .modal-content .close:hover {
+    color: #555;
+  }
+  
+  
+/* /Modal */
+
+
+@media (max-width: 1366px) {
+    .bg-main {
+        height: 420px;
+    }
+
+    .findBox {
+        width: 85%;
+    }
+
+    .findUperBox {
+        width: 55%;
+    }
+
+}
+
+@media (max-width: 720px) {
+    .bg-main {
+        height: 420px;
+    }
+
+
+
+    .findUperBox {
+        margin-top: 6rem;
+        height: 60px;
+        width: 75%;
+    }
+}
+
+

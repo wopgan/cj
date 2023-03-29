@@ -1,0 +1,77 @@
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.cards-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-info{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: aliceblue;
+    margin-top: 6rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    padding: 1rem;
+    border-radius: 15px;
+    height: 10rem;
+    width: 12rem;
+    font-size: 0.7rem;
+    color: #005c53;
+    font-family: sans-serif;
+
+}
+
+.livro {
+    width: 60%;
+    margin-bottom: 1rem;
+}
+
+.tempo {
+    width: 30%;
+    margin-bottom: 1rem;
+}
+
+.trecho {
+    width: 30%;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+    .card-info {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-info {
+        flex-wrap: nowrap;
+        margin-top: 3rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        height: 8rem;
+        width: 7rem;
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 1366px) {
+    .card-info {
+        margin-top: 3rem;
+        margin-left: 4rem;
+        margin-right: 4rem;
+        height: 8rem;
+        width: 10rem;
+        font-size: 0.7rem;
+
+    }
+}
